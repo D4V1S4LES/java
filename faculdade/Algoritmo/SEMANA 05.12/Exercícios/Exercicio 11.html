@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 11</title>
+    </head>
+
+    <script>
+        function cadastro()
+        {
+            var nome = document.getElementById("NOME").value;
+            var idade = document.getElementById("IDADE").value;
+            var salario = document.getElementById("SALARIO").value;
+            var sexo = document.getElementById("SEXO").value;
+            var ec = document.getElementById("EC").value;
+
+            idade = parseInt(idade);
+            salario = parseFloat(salario);
+
+            var retorno;
+            var tamanhoNome = nome.length;
+
+            //console.log(tamanhoNome);
+
+            if (tamanhoNome > 3)
+            {
+                if (idade >= 0 && idade <= 150)
+                {
+                    if (salario > 0)
+                    {
+                        if (sexo == "F" || sexo == "f" || sexo == "M" || sexo == "m")
+                        {
+                            if (ec == "S" || ec == "s" || ec == "C" || ec == "c" || ec == "V" || ec == "v" || ec == "D" || ec == "d")
+                            {
+                                retorno = "Login realizado com sucesso!! <br><br> Bem vindo(a)" + nome;
+                                alert("Login realizado com sucesso!");
+                            }
+                            else
+                            {
+                                retorno = "ATENÇÃO!! CADASTRO INVÁLIDO, Insira novamente suas credenciais de acesso";
+                                alert("ATENÇÃO!!");
+                            }
+                        }
+                        else
+                        {
+                            retorno = "ATENÇÃO!! CADASTRO INVÁLIDO, Insira novamente suas credenciais de acesso";
+                            alert("ATENÇÃO!!");
+                        }
+                    }
+                    else
+                    {
+                        retorno = "ATENÇÃO!! CADASTRO INVÁLIDO, Insira novamente suas credenciais de acesso";
+                        alert("ATENÇÃO!!");
+                    }
+                }
+                else
+                {
+                    retorno = "ATENÇÃO!! CADASTRO INVÁLIDO, Insira novamente suas credenciais de acesso";
+                    alert("ATENÇÃO!!");
+                }
+            }
+            else
+            {
+                retorno = "ATENÇÃO!! CADASTRO INVÁLIDO, Insira novamente suas credenciais de acesso";
+                alert("ATENÇÃO!!");
+            }
+
+            document.getElementById("retorno").innerHTML = retorno;
+        }
+    </script>
+
+    <body>
+        <h1>Exercício 11 - Loops</h1>
+        <h4>Faça um programa que leia e valide as seguintes informações:
+            <br>- Nome: maior que 3 caracteres;
+            <br>- Idade: entre 0 e 150;
+            <br>- Salário: maior que zero;
+            <br>- Sexo: 'f' ou 'm';
+            <br>- Estado Civil: 's', 'c', 'v', 'd';
+            <br>**Use a função len(string) para saber o tamanho de um texto (número de caracteres).
+        </h4>
+        <hr>
+
+        <h2>Preencha o formulário para realizar seu cadastro no site</h2>
+
+        <p id="retorno"></p>
+
+        <p><b>Nome:</b></p>
+        <input type="text" id="NOME" placeholder="Digite seu nome">
+        <br><br>
+
+        <p><b>Idade:</b></p>
+        <input type="text" id="IDADE" placeholder="Digite sua idade">
+        <br><br>
+
+        <p><b>Salário:</b></p>
+        <input type="text" id="SALARIO" placeholder="Digite seu salário">
+        <br><br>
+
+        <p><b>Sexo: </b>(F)Feminino (M)Masculino</p>
+        <input type="text" id="SEXO" placeholder="Digite seu sexo">
+        <br><br>
+
+        <p><b>Estado Civil: </b> "s", "c", "v", "d"</p>
+        <input type="text" id="EC" placeholder="Digite seu estado civil">
+        <br><br>
+
+        <button onclick="cadastro()">Cadastrar</button>
+    </body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste 03</title>
+    </head>
+
+    <script>
+        function gastos()
+        {
+            var alimentacao = document.getElementById("A").value;
+            var transporte = document.getElementById("T").value;
+            var mediaA;
+            var mediaT;
+            var gastoTotal;
+            var mediagastoTotal;
+
+            alimentacao = parseFloat(alimentacao);
+            transporte = parseFloat(transporte);
+
+            mediaA = alimentacao / 30;
+            mediaT = transporte / 30;
+
+            gastoTotal = alimentacao + transporte;
+            mediagastoTotal = gastoTotal / 30;
+
+            mediagastoTotal = mediagastoTotal.toFixed(2);
+            mediaA = mediaA.toFixed(2);
+            mediaT = mediaT.toFixed(2);
+
+            alert ("Você gastou R$" + alimentacao + " em alimentação com uma média diária de R$" + mediaA);
+            alert ("Você gastou R$" + transporte + " em transporte com uma média diária de R$" + mediaT);
+            alert ("Ao todo você gastou R$" + gastoTotal + " neste mês com um gasto diário de R$" + mediagastoTotal);
+        }
+    </script>
+
+    <body>
+        <h1>Despesas Mensais</h1>
+        <p>Digite os gastos com Alimentação</p>
+        <input type="text" id="A">
+
+        <p>Digite os gastos com Transporte</p>
+        <input type="text" id="T">
+        <button onclick = "gastos()">Calcular</button>
+    </body>
+
+</html>

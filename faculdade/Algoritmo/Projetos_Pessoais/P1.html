@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projeto_04.28</title>
+    </head>
+
+    <script>
+        function horasminutos()
+        {
+            var horas = document.getElementById("h1").value;
+            horas = parseFloat(horas);
+            
+            var transformar = horas * 60;
+            transformar = transformar.toFixed(2);
+            transformar = parseFloat(transformar);
+
+            alert (horas + " horas são equivalentes a " + transformar + " minuto(s)");
+        }
+
+        function minutoshoras()
+        {
+            var minutos = document.getElementById("m1").value;
+            minutos = parseFloat(minutos);
+
+            var converter = minutos / 60;
+            converter = converter.toFixed(2);
+            converter = parseFloat(converter);
+
+            alert (minutos + " minutos são equivalentes a " + converter + " hora(s)")
+        }
+    </script>
+
+    <body>
+        <h1>Conversor de Horários</h1>
+        <h4>Converta horas em minutos</h4>
+
+        <p>Digite as horas</p>
+        <input type="text" id="h1">
+        <button onclick = "horasminutos()">Transformar</button>
+        
+        <h4>Converta minutos em horas</h4>
+        <p>Digite os minutos</p>
+        <input type="text" id="m1">
+        <button onclick = "minutoshoras()">Transformar</button>
+    </body>
+
+</html>

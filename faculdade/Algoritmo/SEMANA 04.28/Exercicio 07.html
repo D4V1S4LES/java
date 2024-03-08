@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 07</title>
+    </head>
+
+    <script>
+        function indicarnumeros()
+        {
+            var N1 = document.getElementById("n1").value;
+            var N2 = document.getElementById("n2").value;
+            var N3 = document.getElementById("n3").value;
+
+            N1 = parseFloat(N1);
+            N2 = parseFloat(N2);
+            N3 = parseFloat(N3);
+
+            // Essa primeira etapa é só pra pessoa não por números igual (não está pedindo no trabalho)
+            // Lembrando que || (OR / ou) e dá pra por vários juntos; assim com && (AND / E) tmb dá pra fazer
+
+            if (N1 == N2 || N1 == N3 || N2 == N3) 
+            {
+                alert ("Por favor indique números diferentes")
+            }
+
+            else
+            {
+                if (N1 > N2 && N1 > N3) // É possível encaixar vários if dentro de um único if (serve para criar vários típos de verificação)
+                {
+                    if (N2 < N1 && N2 < N3)
+                    {
+                        alert ("O maior é " + N1 + " e o menor é " + N2)
+                    }
+                    else
+                    {
+                        if (N3 < N1 && N3 < N2)
+                        {
+                            alert ("O maior é " + N1 + " e o menor é " + N3)
+                        }
+                    }
+                }
+
+                if (N2 > N1 && N2 > N3) // Coloquei apenas varios IF pois não te problema NESSE caso; nenhum dos outros casos(IF) há possibilidade de repetir, então não tem problema o computador ler todos, caso contrário teria que por alguns ELSES
+                {
+                    if (N1 < N2 && N1 < N3)
+                    {
+                        alert ("O maior é " + N2 + " e o menor é " + N1)
+                    }
+
+                    else
+                    {
+                        if (N3 < N2 && N3 < N1)
+                        {
+                            alert ("O maior é " + N2 + " e o menor é " + N3)
+                        }
+                    }
+                }
+
+                if (N3 > N1 && N3 > N2)
+                {
+                    if (N1 < N3 && N1 < N2)
+                    {
+                        alert ("O maior é " + N3 + " e o menor é " + N1)
+                    }
+
+                    else
+                    {
+                        if (N2 < N3 && N2 < N1)
+                        {
+                            alert ("O maior é " + N3 + " e o menor é " + N2)
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <body>
+        <h1>Indicador de Números 2.0</h1>
+        <h3>Coloque três números e veja qual deles é o maior e o menor</h3>
+
+        <input type="text" id="n1" placeholder="Digite o primeiro número">
+        <br><br>
+
+        <input type="text" id="n2" placeholder="Digite o segundo número">
+        <br><br>
+
+        <input type="text" id="n3" placeholder="Digite o terceiro número">
+        <br><br>
+
+        <button onclick="indicarnumeros()">Imprimir</button>
+    </body>
+
+</html>

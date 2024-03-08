@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projeto 02</title>
+    </head>
+
+    <script>
+        function calculomedia()
+        {
+            var numero1 = document.getElementById("n1").value;
+            var numero2 = document.getElementById("n2").value;
+
+            numero1 = parseFloat(numero1);
+            numero2 = parseFloat(numero2);
+
+            var media = (numero1 + numero2) / 2;
+            media = media.toFixed(1);
+            media = parseFloat(media);
+
+            if (media >= 7 && media < 10) // OR (ou || ); AND (e &&);
+            {
+                alert ("Aprovado!! Sua nota é " + media)
+            }
+
+            else 
+            {
+                if (media == 10)
+                {
+                    alert ("Aprovado com excelência!! Sua nota é " + media)
+                }
+                else 
+                {
+                    if (media > 10)
+                    {
+                        alert ("Por favor insira os valores de 0 a 10")
+                    }
+                    else 
+                    {
+                        alert ("Reprovado, sua nota foi " + media)
+                    }
+                }
+            }
+        }
+    </script>
+
+    <body>
+        <h1>Avaliador de média
+        <br>
+
+        <input type="text" id="n1" placeholder="Digite o primeiro número">
+        <br>
+
+        <input type="text" id="n2" placeholder="Digite o segundo número">
+        <br>
+
+        <button onclick="calculomedia()">Calcular</button>
+    </body>
+
+</html>

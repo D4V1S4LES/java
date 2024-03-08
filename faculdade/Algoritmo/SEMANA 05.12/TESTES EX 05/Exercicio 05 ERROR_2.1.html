@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TESTE FOR</title>
+    </head>
+
+    <script>
+        function executar()
+        {
+            var N = document.getElementById("Numero").value;
+            N = parseInt(N);
+
+            var divisores = 1;
+            var qntmultiplos = 0;
+            var resultado = "";
+            
+            for (N; divisores <= N; divisores++ )
+            {
+                if(N % divisores == 0)
+                {
+                    qntmultiplos++
+                }
+            }
+
+            if (qntmultiplos == 2 || qntmultiplos == 1)
+            {
+                resultado = resultado + "<br>" + "O número " + N + " é primo";
+            }
+
+            else
+            {
+                alert ("O número não é primo");
+            }
+
+            document.getElementById("result").innerHTML = resultado
+        }
+    </script>
+
+    <body>
+        <h1>Teste número primo</h1>
+        <h3>Digite um número e veja se ele é primo ou não</h3>
+        
+        <input type="text" id="Numero">
+        <br><br>
+
+        <button onclick="executar()">Imprimir</button>
+
+        <p id=result>"O resultado irá aparecer aqui"</p>
+    </body>
+
+</html>

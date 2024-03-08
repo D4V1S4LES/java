@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 08</title>
+    </head>
+
+    <script>
+        function calculo()
+        {
+            var P1 = document.getElementById("p1").value;
+            var P2 = document.getElementById("p2").value;
+            var P3 = document.getElementById("p3").value;
+
+            P1 = parseFloat(P1);
+            P2 = parseFloat(P2);
+            P3 = parseFloat(P3);
+
+            // Essa primeira etapa é só pra pessoa não por números igual (não está pedindo no trabalho)
+            // Lembrando que || (OR / ou) e dá pra por vários juntos; assim com && (AND / E) tmb dá pra fazer
+
+            if (P1 == P2 || P1 == P3 || P2 == P3)
+            {
+                alert ("Por favor digite valores diferentes")
+            }
+
+            else
+            {
+                if (P1 < P2 && P1 < P3) // Fiz essa variação que deixa o código mais curto
+                {
+                    alert ("O mais barato é R$" + P1)
+                }
+
+                if (P2 < P1 && P2 < P3) // Como nenhuma possibilidade de resposta é igual (IF), não tem problema deixar assim com vários (IF)
+                {
+                    alert ("O mais barato é R$" + P2)
+                }
+
+                if (P3 < P1 && P3 < P2)
+                {
+                    alert ("O mais barato é R$" + P3)
+                }
+            }
+
+        }
+    </script>
+
+    <body>
+        <h1>Indicador de Preços</h1>
+        <h3>Digite o preço de 3 produtos e veja qual é o mais barato</h3>
+        <p>Digite os valores separados por ponto (Exemplo: 56.23)</p>
+
+        <input type="text" id="p1" placeholder="Digite o primeiro valor">
+        <br><br>
+
+        <input type="text" id="p2" placeholder="Digite o segundo valor">
+        <br><br>
+
+        <input type="text" id="p3" placeholder="Digite o terceiro valor">
+        <br><br>
+
+        <button onclick="calculo()">Calcular</button>
+    </body>
+</html>

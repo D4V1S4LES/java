@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exerício 14</title>
+    </head>
+
+    <script>
+        function executar()
+        {
+            var n = document.getElementById("t").value;
+            var m = 1;
+            var resultado = "";
+            var c = 1;
+
+            //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx - FOR - xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+            /*for(m; m <= 10; m++)
+            {
+                c = n * m;
+                resultado = resultado + n + " x " + m + " = " + c + "<br>";
+            }*/
+
+            //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx - WHILE - xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+            while(m <= 10)
+            {
+                c = n * m;
+                resultado = resultado + n + " x " + m + " = " + c + "<br>";
+                m++;
+            }
+
+            document.getElementById("resposta").innerHTML = resultado;
+        }
+    </script>
+
+    <body>
+        <h1>Exercício 14 - Loops</h1>
+        <h4>Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número
+            inteiro Num1 (entre 1 a 10).
+            <br> O usuário deve informar de qual numero ele deseja ver a tabuada.
+        </h4>
+        <hr>
+
+        <input type="text" id="t" placeholder="Digite o número">
+        <button onclick="executar()">Calcular</button>
+
+        <p id="resposta"></p>
+    </body>
+
+</html>

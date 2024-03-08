@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+     function mostraDados()
+     {
+          alert ("Algoritmo da Soma")
+          var a = document.getElementById("A").value;
+          // O document é o documento no caso a página
+          // "var = a" é o nome que eu du para a minha variável
+
+          alert ("O valor digitado foi " + a);
+          var b = document.getElementById("B").value;
+          alert ("O valor digitado foi " + b);
+          //Não apague o código se você não tiver crtz de como refazer, apenas coloque em comentário (//)
+
+          var c;
+          a = parseInt(a);
+          b = parseInt(b);
+          c = a + b;
+          // O parseInt está transformando as variáveis "a" e "b" em valores inteiros(números)
+          alert ("O resultado foi " + c)
+     }
+</script>
+
+<body>
+   <div>
+        <h1>Boa noite sras e srs!!</h1>
+        <h2>Algoritmo de soma</h2>
+   </div>
+   
+   <div>
+        <p>Digite o primeiro número:</p>
+        <Input type="text" id="A">
+        <p>Digite o segundo número:</p>
+        <Input type="text" id="B">
+        <button onclick="mostraDados()">Somar</button>
+   </div>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 07</title>
+    </head>
+
+    <script>
+        function executar()
+        {
+            /*var numero1 = 1;
+            var numero2 = 2;
+            var numero3 = 3;
+            var numero4 = 4;
+
+            var resultado = "";
+            var resultado2 = "";
+            var resultado3 = "";
+            //Precisa dessas variáveis para poder quebrar linha apenas dps de cada for;
+
+            var multiplicador = 1;
+
+            for (numero1; multiplicador <= 1; multiplicador++)
+            {
+                numero1 = 1 * multiplicador; //esse multiplicador começa valendo 1 e vai até ser igual ao número
+                resultado = " " + numero1 + "<br>" //armazenei na var resultado
+
+                multiplicador = 1;//depois resetei o multiplicador pra ele valer 1 denovo
+
+                for (numero2; multiplicador <= 2; multiplicador++)//aqui ele vai multiplicar o número até ele ser igual ao multiplicador
+                {
+                    numero2 = 2 * multiplicador ;
+                    resultado = resultado + " " + numero2 + " ";//aqui ele ta armazenando a 2°linha por isso que ta ""
+                }
+
+                multiplicador = 1;
+
+                for (numero3; multiplicador <= 3; multiplicador++)
+                {
+                    numero3 = 3 * multiplicador;
+                    resultado2 = resultado2 + " " + numero3 + " ";
+                }
+
+                multiplicador = 1;
+
+                for (numero4; multiplicador <= 4; multiplicador++)
+                {
+                    numero4 = 4 * multiplicador;
+                    resultado3 = resultado3 + " " + numero4 + " ";
+                }
+            }*/            
+
+            //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX - EXEMPLO DETALHADO - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+            var n1 = 1;
+            var n2 = 2;
+            var n3 = 3;
+            var n4 = 4;
+
+            var m = 1;
+            var r = "";
+            var r2 = "";
+            var r3 = "";
+            var r4 = "";
+
+            for (m; m <= 1; m++)// 1°Linha
+            {
+                n1 = 1 * m;
+                r = r + "" + n1 + "<br>";
+            }
+
+            m = 1; 
+
+            for (m; m <= 2; m++)// 2°Linha
+            {
+                n2 = 2 * m;
+                r2 = r2 + " " + n2;
+            }
+
+            m = 1;//precisa!!
+            
+
+            for (m; m <= 3; m++)// 3̣°Linha
+            {
+                n3 = 3 * m;
+                r3 = r3 + " " + n3;
+            }
+            
+            m = 1;
+
+            for (m; m <= 4; m++)// 4°Linha
+            {
+                n4 = 4 * m;
+                r4 = r4 + " " + n4;
+            }
+
+            document.getElementById("result").innerHTML = r + r2 + "<br>" + r3 + "<br>" + r4;
+        
+            //document.getElementById("result").innerHTML = resultado + "<br>" + resultado2 + "<br>" + resultado3;
+        }
+    </script>
+
+    <body>
+        <h1>Exercício 07 - Loops</h1>
+        <h3>Monte um programa que imprima a seguinte tabela, usando for’s encadeados:</h3>
+        <hr>
+
+        <button onclick="executar()">Imprimir</button>
+        <p id="result">A tabela vai aparecer aqui!</p>
+    </body>
+
+</html>

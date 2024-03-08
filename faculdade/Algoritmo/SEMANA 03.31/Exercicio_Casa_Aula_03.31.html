@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tarefa 03.31</title>
+
+    </head>
+
+    <script>
+
+        function Inverter()
+        {
+
+            var n1 = document.getElementById("N2").value;
+            var n2 = document.getElementById("N1").value;
+
+            n1 = parseInt(n1);
+            n2 = parseInt(n2);
+
+            alert ("O primeiro número é " + n1 + " e o segundo número é " + n2);
+            
+        }
+
+    </script>
+
+    <body>
+        
+        <h1>Inversor de Números</h1>
+        
+        <p>Digite o primeiro número</p>
+        <input type="text" id="N1">
+
+        <p>Digiteo segundo número</p>
+        <input type="text" id="N2">
+
+        <button onclick = "Inverter()">Inverter</button>
+
+    </body>
+
+</html>

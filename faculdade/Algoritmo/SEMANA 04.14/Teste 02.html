@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste 02</title>
+    </head>
+
+    <script>
+        function média()
+        {
+            var nota1 = document.getElementById("n1").value;
+            var nota2 = document.getElementById("n2").value;
+            var resultado
+
+            nota1 = parseFloat(nota1);
+            nota2 = parseFloat(nota2);
+
+            soma = nota1 + nota2;
+            resultado = soma / 2;
+            
+            soma = soma.toFixed(2);
+            resultado = resultado.toFixed(2);
+            resultado = parseFloat(resultado);
+
+            alert("A média é " + resultado);
+        }
+    </script>
+
+    <body>
+        <h1>Cálculo da Média</h1>
+        <p>Digite a nota do 1° bimestre</p>
+        <input type="text" id="n1">
+
+        <p>Digite a nota do 2° bimestre</p>
+        <input type="text" id="n2">
+        <button onclick = "média()">Média</button>
+    </body>
+
+</html>

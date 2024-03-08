@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 08</title>
+    </head>
+
+    <script>
+        function executar()
+        {
+            var nota = document.getElementById("valor").value;
+            nota = parseInt(nota);
+
+            var resultado = "";
+            var pergunta = "";
+            var resposta = "";
+
+            //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  - EXEMPLO 01 - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+            /*if(nota < 0 || nota > 10)
+            {
+                resultado = resultado + " " + "ATENÇÃO!! Valor inválido"
+                pergunta = pergunta + " " + "Insira novamente a nota do aluno!!"
+                document.getElementById("result").innerHTML = resultado;
+                document.getElementById("result2").innerHTML = pergunta;
+            }
+
+            if(nota >= 0 && nota <= 10)
+            {
+                resposta = resposta + "Muito obrigado!!"
+                pergunta =  pergunta + " "
+                document.getElementById("result2").innerHTML = pergunta;
+                document.getElementById("result").innerHTML = resposta;
+            }*/
+
+            //XXXXXXXXXXXXXXXXXXXXXXXXXX - EXEMPLO 02 - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+            /*if(nota != 0 && nota != 1 && nota != 2 && nota != 3 && nota != 4 && nota != 5 && nota != 6 && nota != 7 && nota != 8 && nota != 9 && nota != 10)
+            {
+                resultado = resultado + " " + "ATENÇÃO!! Valor inválido"
+                pergunta = pergunta + " " + "Insira novamente a nota do aluno!!"
+                document.getElementById("result").innerHTML = resultado;
+                document.getElementById("result2").innerHTML = pergunta;
+            }
+
+            else
+            {
+                resposta = resposta + "Muito obrigado!!"
+                pergunta =  pergunta + " "
+                document.getElementById("result2").innerHTML = pergunta;
+                document.getElementById("result").innerHTML = resposta;
+            }*/
+            
+
+            //XXXXXXXXXXXXXXXXXXXXXXXX - EXEMPLO 03 - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+            if(nota >= 0 && nota <= 10)
+            {
+                resposta = resposta + "Muito obrigado!!"
+                pergunta =  pergunta + " "
+                document.getElementById("result2").innerHTML = pergunta;
+                document.getElementById("result").innerHTML = resposta;
+            }
+
+            else
+            {
+                resultado = resultado + " " + "ATENÇÃO!! Valor inválido"
+                pergunta = pergunta + " " + "Insira novamente a nota do aluno!!"
+                document.getElementById("result").innerHTML = resultado;
+                document.getElementById("result2").innerHTML = pergunta;
+            }
+        }
+    </script>
+
+    <body>
+        <h1>Exercício 08 - Loops</h1>
+
+        <h3>Faça um programa que peça uma nota, entre zero e dez.
+            <br>Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.
+        </h3>
+
+        <hr>
+
+        <p id="result2">Por favor digite sua nota!</p>
+        <input type="text" id="valor" placeholder="Digite a nota">
+
+        <button onclick="executar()">Imprimir</button>
+        <p id="result"></p>
+    </body>
+
+</html>

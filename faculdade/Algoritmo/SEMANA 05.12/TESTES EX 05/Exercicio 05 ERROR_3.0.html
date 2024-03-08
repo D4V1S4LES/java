@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 05 Temporário</title>
+    </head>
+
+    <script>
+        function executar()
+        {
+            var condicaoInicial = document.getElementById("Num1").value;
+            var condicaoFinal = document.getElementById("Num2").value;
+            var resultado = "";
+            var solucao = "";
+            var fatorar = 1; // pq se por 1 todos os números  serão divisíveis
+            var erro = "";
+
+            condicaoInicial = parseInt(condicaoInicial);
+            condicaoFinal = parseInt(condicaoFinal);
+
+            for (condicaoInicial; condicaoInicial <= condicaoFinal; condicaoInicial = condicaoInicial = condicaoInicial + 1)
+            {
+                if (condicaoInicial == 2 || condicaoInicial == 3 || condicaoInicial == 5 || condicaoInicial == 7  || condicaoInicial == 11 ||
+                    condicaoInicial % 2 != 0 && condicaoInicial % 3 != 0 && condicaoInicial % 5 != 0 && condicaoInicial % 7 != 0 && condicaoInicial % 11 != 0)
+                {
+                    resultado = resultado + "<br>" + condicaoInicial;
+                }
+            }
+
+            document.getElementById("result").innerHTML = resultado;
+        }
+    </script>
+
+    <body>
+        <h1>Exercício 05 - Loops (Temporário)</h1>
+        <h3>Monte um programa que mostre os números primos entre Num1 e Num2, inclusive os extremos;</h3>
+
+        <input type="text" id="Num1" placeholder="Digite a condição inicial">
+        <br><br>
+
+        <input type="text" id="Num2" placeholder="Digite a condição final">
+        <br><br>
+
+        <button onclick="executar()">Imprimir</button>
+        <p id="result">O resultado vai aparecer aqui!</p>
+    </body>
+
+</html>

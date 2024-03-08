@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste 08</title>
+    </head>
+
+    <script>
+        function calculomedia()
+        {
+            var numero1 = document.getElementById("n1").value;
+            var numero2 = document.getElementById("n2").value;
+            var numero3 = document.getElementById("n3").value;
+
+            var numero4 = document.getElementById("N1").value;
+            var numero5 = document.getElementById("N2").value;
+            var numero6 = document.getElementById("N3").value;
+
+            numero1 = parseFloat(numero1);
+            numero2 = parseFloat(numero2);
+            numero3 = parseFloat(numero3);
+            numero4 = parseFloat(numero4);
+            numero5 = parseFloat(numero5);
+            numero6 = parseFloat(numero6);
+
+            var media1 = (numero1 + numero2 + numero3) / 3;
+            var media2 = (numero4 + numero5 + numero6) / 3;
+
+            media1 = media1.toFixed(2);
+            media2 = media2.toFixed(2);
+
+            media1 = parseFloat(media1);
+            media2 = parseFloat(media2);
+
+            var somamedia = media1 + media2;
+            var mediadasmedias = (media1 + media2) / 2;
+
+            mediadasmedias = mediadasmedias.toFixed(2);
+            mediadasmedias = parseFloat(mediadasmedias);
+
+            alert("A primeira média é " + media1);
+            alert("A segunda média é " + media2);
+            alert("A soma das médias é " + somamedia);
+            alert("A média das médias é " + mediadasmedias);
+        }
+    </script>
+
+    <body>
+        <h1>Cálculo das Médias</h1>
+        <h2>Primeira média</h2>
+
+        <p>Digite o primeiro número</p>
+        <input type="text" id="n1">
+
+        <p>Digite o segundo número</p>
+        <input type="text" id="n2">
+        
+        <p>Digite o terceiro número</p>
+        <input type="text" id="n3">
+
+        <h2>Segunda média</h2>
+        <p>Digite o primeiro número</p>
+        <input type="text" id="N1">
+
+        <p>Digite o segundo número</p>
+        <input type="text" id="N2">
+
+        <p>Digite o terceiro número</p>
+        <input type="text" id="N3">
+
+        <button onclick="calculomedia()">Calcular</button>
+    </body>
+
+</html>

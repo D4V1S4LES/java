@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 05</title>
+    </head>
+
+    <script>
+        function calculomedia()
+        {
+            var numero1 = document.getElementById("n1").value;
+            var numero2 = document.getElementById("n2").value;
+
+            numero1 = parseFloat(numero1);
+            numero2 = parseFloat(numero2);
+
+            // parseFloat para transformar em número
+
+            var media = (numero1 + numero2) / 2;
+
+            media = media.toFixed(1);
+            media = parseFloat(media);
+            // Eu fiz os dois nessa ordem para ele idetificar se for inteiro ele mostra apenas inteiro (3) ou se for quebrado ele mostra (3.4)
+
+            if (media >= 7 && media < 10) // OR (ou || ); AND (e &&);
+            {
+                alert ("Aprovado!! Sua nota é " + media)
+            }
+
+            else 
+            {
+                if (media == 10) // Lembrando que == é pra demonstrar igualdade
+                {
+                    alert ("Aprovado com Distinção!! Sua nota é " + media)
+                }
+                else
+                {
+                    if (media > 10 || media < 0 ) // Lembrando que || significa OR(ou)
+                    {
+                        alert ("Por favor insira os valores de 0 a 10")
+                    }
+                    else 
+                    {
+                        alert ("Reprovado, sua nota foi " + media)
+                    }
+                }
+            }
+        }
+    </script>
+
+    <body>
+        <h1>Avaliador de média
+        <br>
+        <!-- Usei apenas uma vez o <br> pois já é necessário para quebrar linha (situações específicas) -->
+
+        <input type="text" id="n1" placeholder="Digite o primeiro número">
+        <br>
+        <!-- Usei apenas uma vez o <br> pois já é necessário para quebrar linha (situações específicas) -->
+
+
+        <input type="text" id="n2" placeholder="Digite o segundo número">
+        <br>
+        <!-- Usei apenas uma vez o <br> pois já é necessário para quebrar linha (situações específicas) -->
+
+        <button onclick="calculomedia()">Calcular</button>
+    </body>
+
+</html>

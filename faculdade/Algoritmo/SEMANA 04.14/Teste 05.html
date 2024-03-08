@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste 05</title>
+    </head>
+
+    <script>
+        function calculovolume()
+        {
+            var raio = document.getElementById("R").value;
+            var altura = document.getElementById("A").value;
+            var volume
+
+            raio = parseFloat(raio);
+            altura = parseFloat(altura);
+
+            volume = 3.14159*raio*raio*altura;
+            volume = volume.toFixed(2);
+
+            alert("O volume dessa lata é de " + volume + "m³");
+        }   
+    </script>
+
+    <body>
+       <h1>Cálculo do Volume </h1>
+       <p>Digite o raio da lata (metros)</p>
+       <input type="text" id="R">
+
+       <p>Digite a altura da lata (metros)</p>
+       <input type="text" id="A">
+
+       <button onclick="calculovolume()">Calcular</button>
+    </body>
+
+</html>

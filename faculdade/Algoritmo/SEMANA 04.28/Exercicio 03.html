@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 03</title>
+    </head>
+
+    <script>
+        function identificarsexo()
+        {
+            var genero = document.getElementById("S").value;
+
+            if (genero == "F" || genero == "f") // lembrando que o || significa OR(ou)
+            {
+                alert ("O sexo é Feminino")
+            }
+            else
+            {
+                if (genero == "M" || genero == "m") // lembrando que o || significa OR(ou)
+                {
+                    alert ("O sexo é masculino")
+                }
+                else
+                {
+                    alert ("Sexo inválido")
+                }
+            }
+        }
+    </script>
+
+    <body>
+        <h1>Identificador de Sexo</h1>
+
+        <h3>Digite o seu sexo, M - Masculino, F - Feminino</h3>
+        <!-- Estou usando <h3> para criar um sibtitulo menor que o <h1> -->
+
+        <input type="text" id="S" placeholder="Digite o sexo">
+        <!-- placeholder para escrever dentro da caixa de texto -->
+
+        <button onclick="identificarsexo()">Identificar</button>
+    </body>
+</html>

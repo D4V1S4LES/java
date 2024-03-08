@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 06</title>
+    </head>
+
+    <script>
+        function executar()
+        {
+            var X = document.getElementById("x").value;
+            var Y = 0;
+            var resultado = "";
+
+            X = parseFloat(X);
+            
+            for ( Y = 0; Y != 1; X = Y) // Y != 1 enquanto meu Y for difernte de 1
+            {
+                if (X % 2 == 0)// se ele for par
+                {
+                    Y = X / 2;
+                    resultado = resultado + " - " + Y;
+                }
+
+                if (X % 2 != 0)// se ele for ímpar
+                {
+                    Y = 3 * X + 1;
+                    resultado = resultado + " - " + Y;
+                }
+            }
+
+            document.getElementById("result").innerHTML = resultado;
+
+            //xxxxxxxxxxxxxxxxxxxxxxxxxxx - WHILE - xxxxxxxxxxxxxxxxxxxxx
+            
+            /*while(Y != 1)
+            {
+                if (X % 2 == 0)
+                {
+                    Y = X / 2;
+                    resultado = resultado + " - " + Y;
+                }
+
+                if (X % 2 != 0)
+                {
+                    Y = 3 * X + 1;
+                    resultado = resultado + " - " + Y;
+                }
+
+                X = Y;
+            }
+
+            document.getElementById("result").innerHTML = resultado;*/
+        }
+    </script>
+
+    <body>
+        <h1>Exercício 06 - Loops</h1>
+
+        <h4>Monte um programa que dada uma variável x (com valor 180, por exemplo),
+            <br>Temos y deacordo com a seguinte regra:
+            <br>se x é par, y = x / 2_ se x é impar, y = 3 * x + 1
+            <br><br>O programa deve então jogar o valor de y em x e continuar até que y tenha o valor final de 1.
+        </h3>
+        <hr>
+    
+        <input type="text" id="x" placeholder="Digite a variável x">
+        
+        <button onclick="executar()">Imprimir</button>
+        <p id="result">O resultado vai aparecer aqui!</p>
+    </body>
+
+</html>

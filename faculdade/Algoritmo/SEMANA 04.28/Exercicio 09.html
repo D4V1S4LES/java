@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 09</title>
+    </head>
+
+    <script>
+        function ordenar()
+        {
+            var N1 = document.getElementById("n1").value;
+            var N2 = document.getElementById("n2").value;
+            var N3 = document.getElementById("n3").value;
+
+            N1 = parseFloat(N1);
+            N2 = parseFloat(N2);
+            N3 = parseFloat(N3);
+
+            // Essa primeira etapa é só pra pessoa não por números igual (não está pedindo no trabalho)
+            // Lembrando que || (OR / ou) e dá pra por vários juntos; assim com && (AND / E) tmb dá pra fazer
+
+            if (N1 == N2 || N1 == N3 || N2 == N3)
+            {
+                alert ("Por favor digite números diferentes")
+            }
+
+            else
+            {
+                if (N1 > N2 && N1 > N3 && N2 < N1 && N2 > N3) // Novamente usei varios AND (&&) no caso está indicando que o 1°número tem q ser maior que todos, o 2°número tem que ser menor que o 1° e maior que o 3° (formando a sequência 1 2 3 )
+                {
+                    alert ("A ordem fica " + N1 + ", " + N2 + " e " + N3)
+                }
+
+                if (N2 > N1 && N2 > N3 && N1 < N2 && N1 > N3)
+                {
+                    alert ("A ordem fica " + N2 + ", " + N1 + " e " + N3)
+                }
+
+                if (N3 > N1 && N3 > N2 && N2 < N3 && N2 > N1)
+                {
+                    alert ("A ordem fica " + N3 + ", " + N2 + " e " + N1)
+                }
+
+                if (N3 > N1 && N3 > N2 && N1 < N3 && N1 > N2)
+                {
+                    alert ("A ordem fica " + N3 + ", " + N1 + " e " + N2)
+                }
+
+                if (N2 > N1 && N2 > N3 && N3 < N2 && N3 > N1)
+                {
+                    alert ("A ordem fica " + N2 + ", " + N3 + " e " + N1)
+                }
+
+                if (N1 > N2 && N1 > N3 && N3 < N1 && N3 > N2)
+                {
+                    alert ("A ordem fica " + N1 + ", " + N3 + " e " + N2)
+                }
+                //Como são apenas 3 números(totais) isso dá um total de 6 possibilidades de sequência, no caso coloquei todas essas nos IF (se);
+            }   //Se eu quisesse por uma mensagem de "valor inválido" eu teria que por todos esses IF dentro de ELSE
+        }
+    </script>
+
+    <body>
+        <h1>Ordenador de números (Decrescente)</h1>
+        <h3>Coloque três números e descubra como eles ficam em ordem decrescente</h3>
+
+        <input type="text" id="n1" placeholder="Digite o primeiro número">
+        <br><br>
+        <!-- <br> para quebrar linhas -->
+
+        <input type="text" id="n2" placeholder="Digite o segundo número">
+        <br><br>
+        <!-- placeholder para escrever dentro da caixa de texto -->
+
+        <input type="text" id="n3" placeholder="Digite o terceiro número">
+        <br><br>
+
+        <button onclick="ordenar()">Imprimir</button>
+    </body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 02</title>
+    </head>
+
+    <script>
+        function numerador()
+        {
+            var N1 = document.getElementById("n1").value;
+            N1 = parseFloat(N1);
+            // parseFloat para transformar em numeral
+
+            if (N1 < 0) // Se (if) N1 for menor (<) que 0
+            {
+                alert ("O número " + N1 + " é negativo")
+            }
+            else
+            {
+                if (N1 == 0) // Se (if) N1 for igual (==) a 0
+                {
+                    alert ("O número é neutro")
+                }
+                else 
+                {
+                    if (N1 > 0) // Se (if) N1 for maior (>) que 0
+                    {
+                        alert ("O número " + N1 + " é positivo")
+                    }
+                    else
+                    {
+                        alert ("Valor inválido!")
+                    }
+                }
+            }
+        }
+    </script>
+
+    <body>
+        <h1>Numerador positivo & negativo</h1>
+
+        <input type="text" id="n1" placeholder="Digite o número">
+        <!-- placeholder para escrever dentro da cixa de texto -->
+
+        <br><br> 
+        <!-- Estou usando <br><br> para quebrar uma linha entre a caixa de texto e o botão -->
+
+        <button onclick="numerador()">Imprimir</button>
+    </body>
+</html>

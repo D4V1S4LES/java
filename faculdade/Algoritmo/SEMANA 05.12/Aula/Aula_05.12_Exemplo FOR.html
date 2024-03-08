@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste FOR</title>
+    </head>
+
+    <script>
+        function executa()
+        {
+            var condicaoInicial = document.getElementById("Num1").value;
+            var condicaoFinal = document.getElementById("Num2").value;
+
+            condicaoInicial = parseInt(condicaoInicial);
+            condicaoFinal = parseInt(condicaoFinal);
+
+            var i;
+            var resultado = ""; // esse resultado "" está sem valor (Nulo)
+
+            for (i = condicaoInicial; i < condicaoFinal; i = i + 1)
+            {
+                if(i%2 == 0)
+                {
+                    resultado = resultado + " - " + i;
+                }
+            }
+            document.getElementById("result").innerHTML = resultado;
+        }
+    </script>
+
+    <body>
+        <h1>Loops</h1>
+        <h2>Exemplo 01</h2>
+
+        <input type="text" id="Num1" placeholder="Digite a condição inicial">
+        <br><br>
+        <input type="text" id="Num2" placeholder="Digite a condição Final">
+
+        <button onclick="executa()">Executa</button>
+
+        <p id="result">Aqui vai aparecer o resultado</p>
+    </body>
+
+</html>

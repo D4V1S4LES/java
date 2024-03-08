@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste 01</title>
+    </head>
+
+    <script>
+        function conversao()
+        {
+            var celsius = document.getElementById("graus").value;
+            celsius = parseFloat(celsius);
+            
+            var kelvin = celsius + 273.15;
+            var fahrenheit = celsius * 1.8 +32;
+            var reaumur = celsius * 0.8;
+            var rankine = celsius * 1.8 +32 +459.67;
+
+            kelvin = kelvin.toFixed(2);
+            fahrenheit = fahrenheit.toFixed(2);
+            reaumur = reaumur.toFixed(2);
+            rankine = rankine.toFixed(2);
+
+            kelvin = parseFloat(kelvin);
+            fahrenheit = parseFloat(fahrenheit);
+            reaumur = parseFloat(reaumur);
+            rankine = parseFloat(rankine);
+            
+            alert (celsius + "°(C) é equivalente a " + fahrenheit + "°(F) Fahrenheit");
+            alert (celsius + "°(C) é equivalente a " + kelvin + "°(K) Kelvin");
+            alert (celsius + "°(C) é equivalente a " + reaumur + "°(Re) Réaumur");
+            alert (celsius + "°(C) é equivalente a " + rankine + "°(Ra) Rankine");
+        }
+    </script>
+
+    <body>
+        <h1>Conversor de Temperatura</h1>
+        <p>Digite a temperatura em graus celsius</p>
+        <input type="text" id="graus">
+        <button onclick = "conversao()">Converter</button>
+    </body>
+
+</html>

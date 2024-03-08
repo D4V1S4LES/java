@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste 09</title>
+    </head>
+
+    <script>
+        function calculosalario()
+        {
+            var salario = document.getElementById("S").value;
+            salario = parseFloat(salario);
+
+            var sminimo = salario / 1210.00;
+
+            sminimo = sminimo.toFixed(2);
+            sminimo = parseFloat(sminimo);
+
+            alert("O seu salário de R$" + salario + " é equivalente a " + sminimo + " salários mínimos");
+        }
+    </script>
+
+    <body>
+        <h1>Cálculo Salarial</h1>
+        <p>Digite o seu salário (Apenas números)</p>
+        <input type="text" id="S">
+        <button onclick="calculosalario()">Calcular</button>
+    </body>
+
+</html>

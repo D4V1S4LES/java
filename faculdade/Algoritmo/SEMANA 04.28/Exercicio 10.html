@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 10</title>
+    </head>
+
+    <script>
+        function calculoturno()
+        {
+            var turno =  document.getElementById("t").value;
+
+            if (turno == "M" || turno == "m")
+            {
+                alert ("Olá, bom dia!")
+            }
+
+            else //Nesse caso eu tive que colocar vários ELSE pois precisava que só no último caso apareça a mensagem de "valor inválido"
+            {
+                if (turno == "V" || turno == "v")
+                {
+                    alert ("Olá, boa tarde!")
+                }
+
+                else
+                {
+                    if (turno == "N" || turno == "n")
+                    {
+                        alert ("Olá, boa noite")
+                    }
+
+                    else 
+                    {
+                        alert ("Valor inválido")
+                    }
+                }
+            }
+        }
+    </script>
+
+    <body>
+        <h1>Identificador de Turnos</h1>
+        <h3>Em que turno/perído você estuda??</h3>
+        <p>Digite (M)-Matutino ou (V)-Vespertino ou (N)-Noturno.</p>
+
+        <input type="text" id="t" placeholder="Digite seu turno">
+        <br><br>
+        <!-- Uma dica, usa o atalho Ctrl + k + u para por a linha inteira em comentário (html) -->
+
+        <button onclick="calculoturno()">Imprimir</button>
+    </body>
+
+</html>

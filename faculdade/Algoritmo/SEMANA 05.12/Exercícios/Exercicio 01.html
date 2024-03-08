@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 01</title>
+    </head>
+
+    <script>
+        function executar()
+        {
+            var condicaoInicial = document.getElementById("Num1").value;
+            var condicaoFinal = document.getElementById("Num2").value;
+
+            condicaoInicial = parseInt(condicaoInicial);
+            condicaoFinal = parseInt(condicaoFinal);
+
+            var resultado = "";
+
+            //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx - FOR - xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+            /*for (condicaoInicial; condicaoInicial <= condicaoFinal; condicaoInicial = condicaoInicial + 1)
+            {
+                resultado = resultado + "<br>" + condicaoInicial;
+            }*/
+
+            //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx - WHILE - xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+            while(condicaoInicial <= condicaoFinal)
+            {
+                resultado = resultado + "<br>" + condicaoInicial;
+                condicaoInicial++;
+            }
+            
+            document.getElementById("result").innerHTML = resultado;
+        }
+    </script>
+
+    <body>
+        <h1>Exercício 01 - Loops</h1>
+        <h3>Monte um programa que imprima todos os números entre Num1 e Num2, inclusive os extremos;</h3>
+        <hr>
+
+        <input type="text" id="Num1" placeholder="Digite a condição inicial">
+        <br><br>
+
+        <input type="text" id="Num2" placeholder="Digite a condição final">
+        <br><br>
+
+        <button onclick="executar()">Imprima</button>
+        <p id="result">O Resultado vai aparecer aqui!</p>
+    </body>
+
+</html>

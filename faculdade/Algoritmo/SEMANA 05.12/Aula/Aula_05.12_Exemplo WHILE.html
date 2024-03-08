@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exemplo 01</title>
+    </head>
+
+    <script>
+        function executa()
+        {
+            var condicaoInicial = document.getElementById("Num1").value;
+            var condicaoFinal = document.getElementById("Num2").value;
+
+            condicaoInicial = parseInt(condicaoInicial);
+            condicaoFinal = parseInt(condicaoFinal);
+
+            var i = condicaoInicial; //Condição inicial do loop
+            var resultado = ""; // esse resultado "" está sem valor (Nulo)
+
+            while(i < condicaoFinal) //Condição final do loop
+            {
+                if (i%2 == 0) // O símbolo % significa resto da divisão no caso se o resto da divisão de i / 2 for igual a 0
+                {
+                    resultado = resultado + "<br>" + i;
+                }
+                //Esse "<br>" está ai para ele pular uma linha a cada vez que o loop for feito
+                //Quando se usa tags HTML dentro do JS coloca entre "" (Parênteses)
+
+                i = i + 1; //Incremento / decremento (Sem isso ele fica em loop eterno (while))
+            }
+            //Ele só reinicia o loop se tudo oque estiver no while for executado
+
+            document.getElementById("result").innerHTML = resultado;
+            // Estou pegando algo do documento (html) pelo seu id e retornando/pegando todo o html(inner.HTML) da tag
+            // no caso to pegando aquela tag <p id=result> e mudando ela para a variável resultado
+        }
+    </script>
+
+    <body>
+        <h1>Loops</h1>
+        <h2>Exemplo 01</h2>
+
+        <input type="text" id="Num1" placeholder="Digite a condição inicial">
+        <br><br>
+        <input type="text" id="Num2" placeholder="Digite a condição Final">
+
+        <button onclick="executa()">Executa</button>
+
+        <p id="result">Aqui vai aparecer o resultado</p>
+        <!-- É possível agregar id em tags HTML -->
+    </body>
+
+</html>

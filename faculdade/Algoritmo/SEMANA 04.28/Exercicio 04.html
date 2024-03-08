@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 04</title>
+    </head>
+
+    <script>
+        function identificadorvogal()
+        {
+            var letra = document.getElementById("L").value;
+            
+            if (letra == "A" || letra == "a" || letra == "E" || letra == "e" || letra == "I" || letra == "i" || letra == "O" || letra == "o" || letra == "U" || letra == "u")
+            {
+                alert ("A letra (" + letra + ") é uma vogal")
+            }
+
+            else // Tudo que não tiver na condição do if vira consoante (incluindo números, palavras, símbolos)
+            {
+                alert ("A letra (" + letra + ") é uma consoante")
+            }
+        }
+    </script>
+
+    <body>
+        <h1>Identificador de Vogais</h1>
+        <h3>Digite uma letra e descubra se é uma vogal ou não!</h3>
+        <!-- <h3> para pegar um subtitulo menor -->
+
+        <input type="text" id="L" placeholder="Digite uma letra">
+        <!-- placeholder para digitar dentro da caixa -->
+
+        <br><br>
+        <!-- Novamente o <br> para quebrar linha -->
+
+        <button onclick="identificadorvogal()">Imprimir</button>
+    </body>
+</html>
