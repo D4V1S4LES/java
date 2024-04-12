@@ -32,5 +32,15 @@ public class Pokemon {
 		System.out.println("Level: " + level);
 		System.out.println("IV: " + iv);
 	}
+
+	public void subirLevel() {
+		level += 1;
+		System.out.println("\n" + nome + " subiu de level e foi para LV: " + level);
+	}
+	
+	public void descerLevel() {
+		level += -1;
+		System.out.println("\n" + nome + " desceu de level e foi para LV: " + level);
+	}
 	
 }
